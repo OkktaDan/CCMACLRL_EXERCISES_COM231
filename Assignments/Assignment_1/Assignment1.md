@@ -37,6 +37,8 @@ We want to predict whether they **Pass** or **Fail** using **KNN with k = 3**.
 - Use a square 🟥 for students who passed.
 - Use a star ⭐ for the unknown data point.
 
+<img width="567" height="432" alt="image" src="https://github.com/user-attachments/assets/e908c609-bfce-4ab4-adb1-0f98a62b7abc" />
+
 ---
 
 ## 2. Compute Distances (10 points)
@@ -53,16 +55,18 @@ Fill in the table below:
 
 | Student | Hours Studied (X1) | Sleep Hours (X2) | Pass/Fail (Y) | Euclidean Distance |
 | ------- | ------------------ | ---------------- | ------------- | ------------------ |
-| 1       | 1.0                | 5.0              | 0             | ?                  |
-| 2       | 2.0                | 5.5              | 0             | ?                  |
-| 3       | 3.0                | 6.0              | 0             | ?                  |
-| 4       | 4.5                | 5.0              | 0             | ?                  |
-| 5       | 5.0                | 6.5              | 1             | ?                  |
-| 6       | 5.5                | 7.0              | 1             | ?                  |
-| 7       | 6.0                | 6.0              | 1             | ?                  |
-| 8       | 7.0                | 7.0              | 1             | ?                  |
-| 9       | 8.0                | 6.0              | 1             | ?                  |
-| 10      | 9.0                | 7.5              | 1             | ?                  |
+| 1       | 1.0                | 5.0              | 0             | 3.16               |
+| 2       | 2.0                | 5.5              | 0             | 2.06               |
+| 3       | 3.0                | 6.0              | 0             | 1.00               |
+| 4       | 4.5                | 5.0              | 0             | 1.12               |
+| 5       | 5.0                | 6.5              | 1             | 1.12               |
+| 6       | 5.5                | 7.0              | 1             | 1.8                |
+| 7       | 6.0                | 6.0              | 1             | 2.00               |
+| 8       | 7.0                | 7.0              | 1             | 3.16               |
+| 9       | 8.0                | 6.0              | 1             | 4.00               |
+| 10      | 9.0                | 7.5              | 1             | 5.22               |
+
+<img width="953" height="1920" alt="image" src="https://github.com/user-attachments/assets/79414e7b-4a39-4966-bf18-e730d91b7a9c" />
 
 ---
 
@@ -72,16 +76,16 @@ Fill in the table below:
 
 | Student | Hours Studied (X1) | Sleep Hours (X2) | Pass/Fail (Y) | Euclidean Distance |
 | ------- | ------------------ | ---------------- | ------------- | ------------------ |
-| 1       | 1.0                | 5.0              | 0             | ?                  |
-| 2       | 2.0                | 5.5              | 0             | ?                  |
-| 3       | 3.0                | 6.0              | 0             | ?                  |
-| 4       | 4.5                | 5.0              | 0             | ?                  |
-| 5       | 5.0                | 6.5              | 1             | ?                  |
-| 6       | 5.5                | 7.0              | 1             | ?                  |
-| 7       | 6.0                | 6.0              | 1             | ?                  |
-| 8       | 7.0                | 7.0              | 1             | ?                  |
-| 9       | 8.0                | 6.0              | 1             | ?                  |
-| 10      | 9.0                | 7.5              | 1             | ?                  |
+| 1       | 1.0                | 5.0              | 0             | 3.16               |
+| 2       | 2.0                | 5.5              | 0             | 2.06               |
+| **3🔺**    | **3.0**                | **6.0**              | **0**             | **1.00**               | 
+| **4🔺**    | **4.5**                | **5.0**              | **0**             | **1.12**               | 
+| **5🔺**    | **5.0**                | **6.5**              | **1**             | **1.12**               | 
+| 6       | 5.5                | 7.0              | 1             | 1.8                |
+| 7       | 6.0                | 6.0              | 1             | 2.00               |
+| 8       | 7.0                | 7.0              | 1             | 3.16               |
+| 9       | 8.0                | 6.0              | 1             | 4.00               |
+| 10      | 9.0                | 7.5              | 1             | 5.22               |
 
 ---
 
@@ -92,24 +96,24 @@ Fill in the table below:
 
 | Student | Hours Studied (X1) | Sleep Hours (X2) | Pass/Fail (Y) | Euclidean Distance |
 | ------- | ------------------ | ---------------- | ------------- | ------------------ |
-| 1       | 1.0                | 5.0              | 0             | ?                  |
-| 2       | 2.0                | 5.5              | 0             | ?                  |
-| 3       | 3.0                | 6.0              | 0             | ?                  |
-| 4       | 4.5                | 5.0              | 0             | ?                  |
-| 5       | 5.0                | 6.5              | 1             | ?                  |
-| 6       | 5.5                | 7.0              | 1             | ?                  |
-| 7       | 6.0                | 6.0              | 1             | ?                  |
-| 8       | 7.0                | 7.0              | 1             | ?                  |
-| 9       | 8.0                | 6.0              | 1             | ?                  |
-| 10      | 9.0                | 7.5              | 1             | ?                  |
+| 1       | 1.0                | 5.0              | 0             | 3.16               |
+| 2       | 2.0                | 5.5              | 0             | 2.06               |
+| **3🔺**    | **3.0**                | **6.0**              | **0**             | **1.00**               | 
+| **4🔺**    | **4.5**                | **5.0**              | **0**             | **1.12**               | 
+| **5🔺**    | **5.0**                | **6.5**              | **1**             | **1.12**               | 
+| 6       | 5.5                | 7.0              | 1             | 1.8                |
+| 7       | 6.0                | 6.0              | 1             | 2.00               |
+| 8       | 7.0                | 7.0              | 1             | 3.16               |
+| 9       | 8.0                | 6.0              | 1             | 4.00               |
+| 10      | 9.0                | 7.5              | 1             | 5.22               |
 
-**Prediction:** A new student who studied 4 hours and slept 6 hours will **\_\_** the exam.
+**Prediction:** A new student who studied 4 hours and slept 6 hours will **FAIL** the exam.
 
 ---
 
 ## 4. Discussion Questions (5 points)
 
-1. What was your final prediction?
-2. How would the prediction change if we used **k = 5** instead of **k = 3**?
+1. What was your final prediction? ***The prediction was the new student who studied 4 hours and slept 6 hours would have FAILED the exam***
+2. How would the prediction change if we used **k = 5** instead of **k = 3**? ***The prediction would result in a PASS, due to the neighbors majority is PASS***
 
 ---
