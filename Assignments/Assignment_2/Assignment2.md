@@ -105,7 +105,7 @@ $$
 | 4       | 4                   | 65               | **65.4**                                    |
 | 5       | 5                   | 70               | **69.8**                                    |
 
-<img width="1718" height="1101" alt="image" src="https://github.com/user-attachments/assets/ecf5c28c-29d5-4f97-a875-36fadeaa9247" />
+<img width="576" height="455" alt="image" src="https://github.com/user-attachments/assets/966d964c-fc1a-4fe1-a347-b0837654390f" />
 <img width="2048" height="1152" alt="image" src="https://github.com/user-attachments/assets/7a0a56de-6ab6-4de1-aa6f-0dc53f3cc952" />
 
 ---
