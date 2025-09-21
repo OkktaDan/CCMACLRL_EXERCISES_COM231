@@ -60,11 +60,13 @@ $$
 
 | Customer | Time on site (x₁) | Pages viewed (x₂) | Purchase (y) | $\hat{y}$ 
 |----------|-------------------:|------------------:|-------------:|-------------:|
-| A        | 1                  | 4                 | 0            | ?            |
-| B        | 2                  | 3                 | 0            | ?            |
-| C        | 3                  | 7                 | 1            | ?            |
-| D        | 5                  | 2                 | 1            | ?            |
-| E        | 6                  | 6                 | 1            | ?            |
+| A        | 1                  | 4                 | 0            | **0.168**    |
+| B        | 2                  | 3                 | 0            | **0.231**    |
+| C        | 3                  | 7                 | 1            | **0.769**    |
+| D        | 5                  | 2                 | 1            | **0.690**    |
+| E        | 6                  | 6                 | 1            | **0.961**    |
+
+<img width="1152" height="2047" alt="image" src="https://github.com/user-attachments/assets/ce141f51-15af-4efd-a2b2-5b5399675893" />
 
 ### 2. Compute Average Loss (6 points)
 
@@ -78,11 +80,11 @@ $$
  
 | Customer | Time on site (x₁) | Pages viewed (x₂) | Purchase (y) | $\hat{y}$ | $Loss$ |
 |----------|-------------------:|------------------:|-------------:|-------------:|-------------:|
-| A        | 1                  | 4                 | 0            | ?            | ?            |
-| B        | 2                  | 3                 | 0            | ?            | ?            |
-| C        | 3                  | 7                 | 1            | ?            | ?            |
-| D        | 5                  | 2                 | 1            | ?            | ?            |
-| E        | 6                  | 6                 | 1            | ?            | ?            |
+| A        | 1                  | 4                 | 0            | **0.168**    | **0.184**    |
+| B        | 2                  | 3                 | 0            | **0.231**    | **0.263**    |
+| C        | 3                  | 7                 | 1            | **0.769**    | **0.263**    |
+| D        | 5                  | 2                 | 1            | **0.690**    | **0.371**    |
+| E        | 6                  | 6                 | 1            | **0.961**    | **0.040**    |
 
   - Report the **average BCE loss** over all 5 customers  
 
@@ -91,9 +93,10 @@ Loss_{avg} = \frac{1}{N} \sum_{i=1}^N Loss_i
 $$
 
 $$
-Loss_{avg} = ?
+Loss_{avg} = **0.224**
 $$
 
+<img width="1152" height="2047" alt="image" src="https://github.com/user-attachments/assets/7736573c-e2f3-4356-9b3c-d6e31a1a2778" />
 
 
 ### 3. Update the slope and intercept using Gradient Descent (6 points)
@@ -101,9 +104,9 @@ $$
    - Compute gradients of the loss w.r.t. $m_1, m_2, b$ 
 
 $$
-\frac{\partial L}{\partial m_1} = ? \quad
-\frac{\partial L}{\partial m_2} = ?, \quad
-\frac{\partial L}{\partial b} = ?
+\frac{\partial L}{\partial m_1} = **-0.3694**, \quad
+\frac{\partial L}{\partial m_2} = **-02212**, \quad
+\frac{\partial L}{\partial b} = **-0.0362**
 $$
 
    - Calculate the new slopes $m_1, m_2$  and intercept $b$ :
@@ -115,21 +118,24 @@ new b = b - \eta \frac{\partial L}{\partial b}
 $$
 
 $$
-new m_1 = ?, \quad
-new m_2 = ?, \quad
-new b = ?
+new m_1 = **0.8369**, \quad
+new m_2 = **0.4221**, \quad
+new b = **-3.9964**
 $$
+
+<img width="1152" height="2047" alt="image" src="https://github.com/user-attachments/assets/0ef72c07-af86-4857-aa47-0ad29a4c3923" />
 
 ### 4. Compute new probabilities using the new slopes and intercept (5 points)
 
 | Customer | Time on site (x₁) | Pages viewed (x₂) | Purchase (y) | new $\hat{y}$ 
 |----------|-------------------:|------------------:|-------------:|-------------:|
-| A        | 1                  | 4                 | 0            | ?            |
-| B        | 2                  | 3                 | 0            | ?            |
-| C        | 3                  | 7                 | 1            | ?            |
-| D        | 5                  | 2                 | 1            | ?            |
-| E        | 6                  | 6                 | 1            | ?            |
+| A        | 1                  | 4                 | 0            |**0.187**     |
+| B        | 2                  | 3                 | 0            |**0.258**     |
+| C        | 3                  | 7                 | 1            |**0.813**     |
+| D        | 5                  | 2                 | 1            |**0.737**     |
+| E        | 6                  | 6                 | 1            |**0.972**     |
 
+<img width="1152" height="2047" alt="image" src="https://github.com/user-attachments/assets/32b3d7f5-80f6-4917-a193-f75e24794483" />
 
 ### 5. Compute new Average Loss (6 points)
 - Fill in the table by computing the **new loss per customer**  
@@ -137,15 +143,17 @@ $$
 
 | Customer | Time on site (x₁) | Pages viewed (x₂) | Purchase (y) | $\hat{y}$ | new $Loss$ |
 |----------|-------------------:|------------------:|-------------:|-------------:|-------------:|
-| A        | 1                  | 4                 | 0            | ?            | ?            |
-| B        | 2                  | 3                 | 0            | ?            | ?            |
-| C        | 3                  | 7                 | 1            | ?            | ?            |
-| D        | 5                  | 2                 | 1            | ?            | ?            |
-| E        | 6                  | 6                 | 1            | ?            | ?            |
+| A        | 1                  | 4                 | 0            |**0.187**     |**0.207**     |
+| B        | 2                  | 3                 | 0            |**0.258**     |**0.298**     |
+| C        | 3                  | 7                 | 1            |**0.813**     |**0.207**     |
+| D        | 5                  | 2                 | 1            |**0.737**     |**0.305**     |
+| E        | 6                  | 6                 | 1            |**0.972**     |**0.028**     |
 
 - Report the **new average BCE loss** over all 5 customers. (Note: The new average loss must be lower than the previous average loss)
 
 $$
-New Loss_{avg} = ?
+New Loss_{avg} = **0.209**
 $$
+
+<img width="1152" height="2047" alt="image" src="https://github.com/user-attachments/assets/9bdeb4fb-e16c-40e3-958f-79ada41aee10" />
 
